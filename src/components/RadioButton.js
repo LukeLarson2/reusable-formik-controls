@@ -7,7 +7,7 @@ function RadioButton(props) {
   return (
     <div className="form-control">
       <label>{label}</label>
-      <Field name={name} {...rest}>
+      <Field name={name}>
         {({ field }) => {
           return options.map((option) => {
             return (
@@ -16,6 +16,7 @@ function RadioButton(props) {
                   type="radio"
                   id={option.value}
                   {...field}
+                  {...rest}
                   value={option.value}
                   checked={field.value === option.value}
                 />

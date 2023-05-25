@@ -34,6 +34,7 @@ Form {
   padding: 10px;
   font-size: 30px;
   font-weight: bold;
+  color: #222222;
 }
 
 input + label {
@@ -90,7 +91,7 @@ textarea,
 select {
   display: block;
   width: 300px;
-  padding: 6px;
+  padding: 6px 17px;
   font-size: 14px;
   line-height: 1.42857143;
   color: #555;
@@ -99,6 +100,10 @@ select {
   border: none;
   border-radius: 4px;
   opacity: 1;
+}
+
+select {
+  width: 100%;
 }
 
 .form-control {

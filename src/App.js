@@ -9,9 +9,9 @@ import RegistrationForm from "./components/RegistrationForm";
 function App() {
   return (
     <div className="App">
-      {/* <LoginForm /> */}
+      <LoginForm />
       {/* <RegistrationForm /> */}
-      <EnrollmentForm />
+      {/* <EnrollmentForm /> */}
     </div>
   );
 }

@@ -17,7 +17,6 @@ function DatePicker(props) {
           return (
             <DateView
               showIcon
-              isClearable
               id={name}
               {...field}
               {...rest}

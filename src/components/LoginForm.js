@@ -11,9 +11,7 @@ function LoginForm() {
 
   const validationSchema = Yup.object({
     email: Yup.string().email("Invalid Format").required("Required"),
-    password: Yup.string()
-      .min(6, "Must be at least 6 characters")
-      .required("Required"),
+    password: Yup.string().required("Required"),
   });
 
   const onSubmit = (values, onSubmitProps) => {
@@ -29,7 +27,9 @@ function LoginForm() {
       {(formik) => {
         return (
           <Form>
-            <label className="title">User Login</label>
+            <div className="title-position">
+              <label className="title">Login</label>
+            </div>
             <FormikControl
               control="input"
               type="email"
@@ -42,17 +42,22 @@ function LoginForm() {
               label="Password"
               name="password"
             />
-            <div className="btn-placement">
-              <button
-                className="login"
-                type="submit"
-                disabled={!formik.isValid}
-              >
-                Login
-              </button>
-              <button className="sign-up" type="button">
-                Sign Up
-              </button>
+            <div className="login-signup">
+              <div className="btn-placement">
+                <button
+                  className="login"
+                  type="submit"
+                  disabled={!formik.isValid}
+                >
+                  Login
+                </button>
+              </div>
+              <p className="or">or</p>
+              <div className="btn-placement">
+                <button className="sign-up" type="button">
+                  Sign Up
+                </button>
+              </div>
             </div>
           </Form>
         );

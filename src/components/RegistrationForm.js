@@ -43,6 +43,7 @@ function RegistrationForm() {
       {(formik) => {
         return (
           <Form>
+            <label className="title">Register</label>
             <FormikControl
               control="input"
               type="email"
@@ -73,7 +74,7 @@ function RegistrationForm() {
               type="text"
               name="phone"
             />
-            <button type="submit" disabled={!formik.isValid}>
+            <button className="submit" type="submit" disabled={!formik.isValid}>
               Submit
             </button>
           </Form>

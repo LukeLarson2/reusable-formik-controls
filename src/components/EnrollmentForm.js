@@ -41,6 +41,9 @@ function EnrollmentForm() {
       {(formik) => {
         return (
           <Form>
+            <div className="title-position">
+              <label className="title">Course Enrollment</label>
+            </div>
             <FormikControl
               control="input"
               type="email"
@@ -50,9 +53,15 @@ function EnrollmentForm() {
             <FormikControl control="textarea" label="Bio" name="bio" />
             <FormikControl
               control="select"
+              as="select"
               label="Select a course"
               name="course"
               options={courses}
+            />
+            <FormikControl
+              control="date"
+              label="Select course start date"
+              name="courseDate"
             />
             <FormikControl
               control="checkbox"
@@ -60,12 +69,11 @@ function EnrollmentForm() {
               name="skillset"
               options={skills}
             />
-            <FormikControl
-              control="date"
-              label="Select course start date"
-              name="courseDate"
-            />
-            <button type="submit">Submit</button>
+            <div className="btn-placement">
+              <button className="submit" type="submit">
+                Submit
+              </button>
+            </div>
           </Form>
         );
       }}

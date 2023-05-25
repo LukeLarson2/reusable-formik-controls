@@ -43,8 +43,15 @@ function LoginForm() {
               name="password"
             />
             <div className="btn-placement">
-              <button type="submit" disabled={!formik.isValid}>
+              <button
+                className="login"
+                type="submit"
+                disabled={!formik.isValid}
+              >
                 Login
+              </button>
+              <button className="sign-up" type="button">
+                Sign Up
               </button>
             </div>
           </Form>
